@@ -1,0 +1,178 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-background-light-rgb: 245, 245, 245;
+    --clr-black-rgb: 0, 0, 0;
+    --clr-red-rgb: 184, 63, 69;
+    --clr-white-rgb: 255, 255, 255;
+    --clr-white: white;
+    --clr-red: rgb(184, 63, 69);
+
+    --clr-background-light-rgb: 245, 245, 245;
+    --clr-red-rgb: 184, 63, 69;
+}
+
+body {
+    font-family: Helvetica, sans-serif, Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(var(--clr-background-light-rgb));
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(var(--clr-red-rgb));
+    font-size: 4rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+#todo-input {
+    padding: 1rem 0 1rem 1rem;
+    background-color: rgb(var(--clr-white-rgb));
+    border: none;
+    border-radius: .25rem;
+    box-shadow: 3px 1px 8px 5px rgba(var(--clr-black-rgb), 0.25);
+}
+
+#todo-input::placeholder {
+    font-family: Helvetica, sans-serif, Arial, sans-serif;
+    font-size: 1.25rem;
+    color: rgb(var(--clr-red-rgb));
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.radioForm {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3.75rem;
+}
+
+input[type="radio"] {
+    position: absolute;
+    left: -1000rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+input[type="radio"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(var(--clr-background-light-rgb));
+    border: 2px solid rgb(var(--clr-red-rgb));
+    margin-right: 0.5rem;
+}
+
+input[type="radio"]:checked + label::before {
+    background-color: rgb(var(--clr-red-rgb));
+    border-color: rgb(var(--clr-red-rgb));
+}
+
+label:hover::before {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.todo {
+    display: flex;
+    background-color: var(--clr-white);
+    padding: .5rem 1.5rem;
+    border-radius: .25rem;
+    box-shadow: 3px 1px 8px 5px rgba(var(--clr-black-rgb), 0.25);
+}
+
+.todo p {
+    margin-left: 1rem;
+}
+
+.todo + .todo {
+    margin-top: 1rem;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    background-color: white; 
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--clr-red); 
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.radioLabel {
+    padding-left: 1rem;
+    padding-top: .125rem;
+    margin-bottom: 0;
+}
+
+/* =============================== General Classes =================================== */
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mbl-2 {
+    margin-block: 2rem;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.btn {
+    color: rgb(var(--clr-white-rgb));
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(var(--clr-red-rgb));
+    box-shadow: 4px 6px 4px 0px rgba(var(--clr-red-rgb), 0.5);
+    border: none;
+    border-radius: .25rem;
+    padding: 1rem 3rem;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
