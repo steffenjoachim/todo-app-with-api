@@ -183,17 +183,10 @@ async function postTodo(newTodo) {
 }
 
 // Check if a todo with the same description already exists
-async function checkIfTodoExists(description) {
-  const response = await fetch(apiUrl);
-  if (response.ok) {
-    const todos = await response.json();
-    return todos.some(
-      (todo) => todo.description.toLowerCase() === description.toLowerCase()
-    );
-  } else {
-    console.error("Error checking if todo exists:", response.statusText);
-    return false;
-  }
+function checkIfTodoExists(description) {
+  return todos.some(
+    (todo) => todo.description.toLowerCase() === description.toLowerCase()
+  );
 }
 
 // Mark a todo as done and update it in the API
