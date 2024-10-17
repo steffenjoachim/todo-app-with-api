@@ -5,7 +5,7 @@ const todosContainer = document.querySelector(".todos-container");
 const formWrappers = document.querySelectorAll("form");
 const h2Form = document.createElement("h2");
 const form = document.createElement("form");
-const apiUrl = "http://localhost:3000/todos/";
+const apiUrl = "http://localhost:3010/todos/";
 
 const radioBtnArray = ["All", "Open", "Done"];
 let todos = [];  

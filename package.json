@@ -1,0 +1,16 @@
+{
+  "name": "todo-app-with-api",
+  "version": "1.0.0",
+  "description": "This is a simple Todo application that implements state management using JavaScript and interacts with a RESTful API. The app allows users to manage their tasks, including adding, marking as done, filtering, and removing completed todos. The app also retrieves and persists the data from an external API.",
+  "main": "script.js",
+  "scripts": {
+    "e2e": "cypress open",
+    "serve": "serve ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.15.0"
+  }
+}
