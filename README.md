@@ -18,3 +18,4 @@ This is a simple Todo application that implements state management using JavaScr
 - CSS
 - JavaScript
 - RESTful API -> https://github.com/coding-bootcamps-eu/todo-api
+- Cypress for testing
